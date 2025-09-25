@@ -14,12 +14,12 @@
  name: First workflow  
  on: push  
  jobs:  
-    first job:  
+    first_job:  
        runs-on: ubuntu-latest   
          steps:  
             - name : welcome message  
               run: echo " my fist github action job"  
-               
+
             - name : list files
               run: ls
 
