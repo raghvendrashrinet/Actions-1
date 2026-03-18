@@ -26,7 +26,7 @@ jobs:
         uses: actions/download-artifact@v4
         with:
           name: build-artifact # Must match the upload name
-          path: f1.txt
+          path: ./f1.txt
       - name : list file
         run: ls -ltra
       - name : print context 
