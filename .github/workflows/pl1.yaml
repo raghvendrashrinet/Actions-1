@@ -9,5 +9,12 @@ jobs:
     runs-on: 'ubuntu-latest'
     steps:
       - name: echo
-        run: echo 'this is echo'
+        run: echo 'this is echo' 
+      - name: create text file
+        run: echo "content blah blah " > f1.txt
+  job2:
+     runs-on : 'ubuntu-latest'
+     steps:
+      -name : print context 
+       run: cat f1.txt
     
