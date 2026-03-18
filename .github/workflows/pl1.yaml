@@ -9,5 +9,5 @@ jobs:
     runs-on: 'ubuntu-latest'
     steps:
       - name: echo
-        run: 'this is echo'
+        run: echo 'this is echo'
     
