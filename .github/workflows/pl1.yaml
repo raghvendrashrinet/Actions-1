@@ -19,7 +19,9 @@ jobs:
           path: f1.txt
   job2:
      runs-on : 'ubuntu-latest'
+     needs: job1
      steps:
+      
       - name: Download Artifact
         uses: actions/download-artifact@v4
         with:
