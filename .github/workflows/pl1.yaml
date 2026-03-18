@@ -12,9 +12,19 @@ jobs:
         run: echo 'this is echo' 
       - name: create text file
         run: echo "content blah blah " > f1.txt
+      - name: Upload Artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: build-artifact # Unique name for this artifact
+          path: f1.txt
   job2:
      runs-on : 'ubuntu-latest'
      steps:
+      - name: Download Artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: build-artifact # Must match the upload name
+          path: f1.txt
       - name : print context 
         run: cat f1.txt
     
