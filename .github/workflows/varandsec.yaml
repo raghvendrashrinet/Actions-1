@@ -7,7 +7,7 @@ on:
 
 jobs:
   env_sec:
-    runs-on: 'ubuntu_latest'
+    runs-on: 'ubuntu-latest'
     env:
       var_joblevel: 'variable at job level'
     steps:
@@ -17,7 +17,7 @@ jobs:
         run: |
           echo  "job level variable : ${{env.var_joblevel}}"
           echo "step level variable : $var2 "
-          
+
 
           
           
