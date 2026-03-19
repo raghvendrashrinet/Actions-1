@@ -32,5 +32,8 @@ jobs:
       - name : print context 
         run: cat f1.txt
       - name: test
-        run: echo ' this is test'
+        run: | 
+          echo ' this is test'
+          echo 'line two'
+          echo 'line three'
     
