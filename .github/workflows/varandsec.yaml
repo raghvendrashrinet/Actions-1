@@ -16,7 +16,7 @@ jobs:
           var2 : 'step level var'
         run: |
           echo  "job level variable : ${{env.var_joblevel}}"
-          echo "step level variable : $var2 "
+          echo "step level variable : '$var2' "
 
 
           
