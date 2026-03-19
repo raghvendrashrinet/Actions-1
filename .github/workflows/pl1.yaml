@@ -22,7 +22,7 @@ jobs:
      needs: job1
      steps:
       
-      - name: Download Artifact
+      - name: Download Artifact 
         uses: actions/download-artifact@v4
         with:
           name: build-artifact # Must match the upload name
@@ -31,4 +31,6 @@ jobs:
         run: ls -ltra
       - name : print context 
         run: cat f1.txt
+      - name: test
+        run: echo ' this is test'
     
