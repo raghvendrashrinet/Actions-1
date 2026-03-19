@@ -1,0 +1,28 @@
+name: Testing variable and secrets
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  env_sec:
+    runs-on: 'ubuntu_latest'
+    env:
+      var_joblevel: 'variable at job level'
+    steps:
+      - name : step 1
+        env:
+          var2 : 'step level var'
+        run: |
+          echo  "job level variable : ${{env.var_joblevel}}"
+          echo "step level variable : $var2 "
+          
+
+          
+          
+
+
+
+
+
