@@ -17,7 +17,8 @@ jobs:
         run: |
           echo  "job level variable : ${{env.var_joblevel}}"
           echo "step level variable : '$var2' "
-          echo "workflow level var ${{ vars.SECRET1}}"
+          echo "workflow level var ${{ vars.repo_var}}"
+          echo "workflow level secret ${{ secrets.SECRET1}}"
 
 
           
